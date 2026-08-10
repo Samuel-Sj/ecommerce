@@ -12,7 +12,7 @@ public class ManhwaService {
         this.repository = repository;
     }
 
-    public Manhwa findbyManhwaName (String name) {
-        return repository.findbyManhwaName(name).orElseThrow(() -> new RuntimeException("Manhwa não encontrado !"));
+    public Manhwa findByName (String name) {
+        return repository.findByName(name).orElseThrow(() -> new RuntimeException("Manhwa não encontrado !"));
     }
 }

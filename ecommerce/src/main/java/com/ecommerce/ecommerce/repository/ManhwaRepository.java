@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface ManhwaRepository extends JpaRepository<Manhwa,Long> {
 
-    Optional<Manhwa> findbyManhwaName (String name);
+    Optional<Manhwa> findByName(String name);
 }

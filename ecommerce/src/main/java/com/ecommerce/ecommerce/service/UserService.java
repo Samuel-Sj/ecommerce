@@ -18,7 +18,7 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
     }
 
-    public User findById(Long id) {
+    public User findbyId(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Id de usuário não encontrado!"));
     }

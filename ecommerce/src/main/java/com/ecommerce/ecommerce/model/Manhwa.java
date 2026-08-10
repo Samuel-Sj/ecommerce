@@ -1,8 +1,6 @@
 package com.ecommerce.ecommerce.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
@@ -12,11 +10,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Table (name = "manhwa")
 public class Manhwa {
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private long id;
     @Column (nullable = false)
     private String Name;
 
-    public Manhwa(String name) {
-    }
+
 
     public void setName(String name) {
         Name = name;

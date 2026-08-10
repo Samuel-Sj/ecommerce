@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public UserController (UserService userService) {
         this.userService = userService;
     }
 
@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping("/users/{name}")
     public User getUserByName (@PathVariable String name) {
-        return userService.findbyName(name);
+        return userService.findByName(name);
     }
 
     @PostMapping("/users")
